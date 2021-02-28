@@ -15,9 +15,9 @@ app.listen(port, function () {
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.post('/door-status', function (req, res) {
+app.post('/door', function (req, res) {
   const doorStatus = req.body.status;
-
+  
   database.ref("door").set({ status: doorStatus }, (err) => {
     if (err) {
       console.log("Failed with err: " + error);
