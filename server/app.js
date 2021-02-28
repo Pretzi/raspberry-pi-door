@@ -18,13 +18,7 @@ app.use(bodyParser.json())
 app.post('/door', function (req, res) {
   const doorStatus = req.body.status;
 
-  const states = {
-    open: "abierta",
-    close: "cerrada"
-  }
-  console.log("Door Status:", doorStatus, states[doorStatus]);
-
-  database.ref("door").set({ status: states[doorStatus] }, (err) => {
+  database.ref("door").set({ status: doorStatus }, (err) => {
     if (err) {
       console.log("Failed with err: " + error);
     } else {
