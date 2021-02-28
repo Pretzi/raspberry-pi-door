@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 
 app.post('/door', function (req, res) {
   const doorStatus = req.body.status;
-  console.log("Door Status:", doorStatus);
+  console.log("Door Status:", doorStatus, states[doorStatus]);
 
   const states = {
     open: "abierta",
