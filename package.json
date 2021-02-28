@@ -1,0 +1,23 @@
+{
+  "name": "raspberry-pi-door",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pretzi/raspberry-pi-door.git"
+  },
+  "author": "Manuel Pretelin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pretzi/raspberry-pi-door/issues"
+  },
+  "homepage": "https://github.com/Pretzi/raspberry-pi-door#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "onoff": "^6.0.1"
+  }
+}
