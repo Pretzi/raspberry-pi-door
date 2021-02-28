@@ -1,6 +1,6 @@
 const express = require("express");
 const firebase = require('firebase');
-const { firebaseConfig } = require("./firebase-config")
+const firebaseConfig = require("./firebase-config")
 const port = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const app = express();
