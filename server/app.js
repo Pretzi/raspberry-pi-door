@@ -19,7 +19,12 @@ app.post('/door', function (req, res) {
   const doorStatus = req.body.status;
   console.log("Door Status:", doorStatus);
 
-  database.ref("door").set({ status: doorStatus }, (err) => {
+  const states = {
+    open: "abierta",
+    close: "cerrada"
+  }
+
+  database.ref("door").set({ status: states[doorStatus] }, (err) => {
     if (err) {
       console.log("Failed with err: " + error);
     } else {
