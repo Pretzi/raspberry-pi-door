@@ -29,3 +29,12 @@ app.post('/door', function (req, res) {
 
   res.send('[Door] Update Successful');
 });
+
+app.get('/door', function (req, res) {
+  database.ref('door').once('value')
+  .then(function(snapshot) {
+      const { status } = snapshot.val();
+      console.log("Door Status:", status);
+      res.send(status);
+  })
+});
